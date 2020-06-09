@@ -1,8 +1,8 @@
 import os
 from sqlalchemy import Column, String, Integer, Numeric
 from flask_sqlalchemy import SQLAlchemy
-import json
 from flask_migrate import Migrate
+import json
 
 database_name = "dish"
 project_dir = os.path.dirname(os.path.abspath(__file__))
