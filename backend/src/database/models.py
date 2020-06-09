@@ -2,6 +2,7 @@ import os
 from sqlalchemy import Column, String, Integer, Numeric
 from flask_sqlalchemy import SQLAlchemy
 import json
+from flask_migrate import Migrate
 
 database_name = "dish"
 project_dir = os.path.dirname(os.path.abspath(__file__))
@@ -18,6 +19,7 @@ def setup_db(app, database_path=database_path):
     db.app = app
     db.init_app(app)
     db.create_all()
+    migrate = Migrate(app, db)
 
 class Dish(db.Model):
     __tablename__ = "dishes"

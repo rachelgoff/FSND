@@ -5,8 +5,10 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
 from flask_cors import CORS
 
-from .database.models import setup_db, Dish, Restaurant, Category
-from .auth.auth import AuthError, requires_auth
+# from .database.models import setup_db, Dish, Restaurant, Category
+# from .auth.auth import AuthError, requires_auth
+from backend.src.database.models import setup_db, Dish, Restaurant, Category
+from backend.src.auth.auth import AuthError, requires_auth
 import random
 
 
